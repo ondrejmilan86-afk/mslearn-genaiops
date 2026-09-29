@@ -97,6 +97,10 @@ resource project 'Microsoft.CognitiveServices/accounts/projects@2025-06-01' = {
   name: aiFoundryProjectName
   parent: aiAccount
   location: location
+  dependsOn: [
+    aiFoundryAccountCapabilityHost
+    modelDeployments
+  ]
   identity: {
     type: 'SystemAssigned'
   }
