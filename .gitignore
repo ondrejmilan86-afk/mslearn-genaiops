@@ -420,3 +420,7 @@ FodyWeavers.xsd
 *.msm
 *.msp
 .azure
+
+.venv/
+
+.venv/
