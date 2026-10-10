@@ -21,7 +21,7 @@ project_client = AIProjectClient(
 agent = project_client.agents.create_version(
     agent_name=os.environ["AGENT_NAME"],
     definition=PromptAgentDefinition(
-        model="<available-lower-cost-model>",  # Use Global Standard model
+        model=os.getenv("MODEL_NAME", "claude-haiku-4-5"),  # Use Global Standard model
         instructions=instructions,
     ),
 )
